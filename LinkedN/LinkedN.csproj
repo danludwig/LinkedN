@@ -33,22 +33,67 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetOpenAuth.Core">
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.0.12182\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="VisualStudioGitIgnore">
-      <HintPath>..\packages\VisualStudioGitIgnore.1.2\lib\net40\VisualStudioGitIgnore.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\IAuthenticateLinkedInApp.cs" />
+    <Compile Include="Api\IConsumeLinkedInApi.cs" />
+    <Compile Include="Api\IHandleLinkedInRequest.cs" />
+    <Compile Include="Api\IStoreLinkedInSecrets.cs" />
+    <Compile Include="Api\IStoreLinkedInTokens.cs" />
+    <Compile Include="Api\LinkedInUserAuthorizationRequest.cs" />
+    <Compile Include="Api\LinkedInUserAuthorizationResponse.cs" />
+    <Compile Include="Fluent\DefaultLinkedInClient.cs" />
+    <Compile Include="Fluent\LinkedInClient.cs" />
+    <Compile Include="Fluent\PersonField.cs" />
+    <Compile Include="Fluent\PersonFieldGroup.cs" />
+    <Compile Include="Fluent\PersonRequestExtensions.cs" />
+    <Compile Include="Fluent\PersonRequestHandler.cs" />
+    <Compile Include="Fluent\PersonRequestPart.cs" />
+    <Compile Include="Impl\BruteForceLinkedInClientServiceProvider.cs" />
+    <Compile Include="Impl\ConfigAppSettingLinkedInCredentials.cs" />
+    <Compile Include="Impl\DefaultConfigAppSettingLinkedInCredentials.cs" />
+    <Compile Include="Impl\DotNetOpenAuthConsumerTokenManager.cs" />
+    <Compile Include="Impl\HttpCookieLinkedInTokenStorage.cs" />
+    <Compile Include="Impl\XmlLinkedInSecretStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Connections.cs" />
+    <Compile Include="Resources\Country.cs" />
+    <Compile Include="Resources\Date.cs" />
+    <Compile Include="Resources\Education.cs" />
+    <Compile Include="Resources\Educations.cs" />
+    <Compile Include="Resources\Headers.cs" />
+    <Compile Include="Resources\HeaderValue.cs" />
+    <Compile Include="Resources\Language.cs" />
+    <Compile Include="Resources\LanguageInfo.cs" />
+    <Compile Include="Resources\Languages.cs" />
+    <Compile Include="Resources\Location.cs" />
+    <Compile Include="Resources\Person.cs" />
+    <Compile Include="Resources\ProfileRequest.cs" />
+    <Compile Include="Resources\ResourceModel.cs" />
+    <Compile Include="Util\LinkedNExtensions.cs" />
+    <Compile Include="Util\ResourceConverter.cs" />
+    <Compile Include="Util\ServiceDescriptionFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="git.ignore" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
