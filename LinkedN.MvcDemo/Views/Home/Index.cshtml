@@ -1,0 +1,64 @@
+﻿<div data-bind="visible: initialized" style="display: none;">
+    <h3>
+        Who's profile do you want to request?
+    </h3>
+    <div class="radio-buttons" data-bind="foreach: identifiers">
+        <label data-bind="css: { selected: value === $root.identifier() }">
+            <input type="radio" name="identifier" data-bind="value: value, checked: $root.identifier" />
+            <span data-bind="text: text"></span>
+        </label>
+    </div>
+    <div>
+        <input type="text" name="memberId" placeholder="Enter Member ID" data-bind="value: memberId, valueUpdate: 'afterkeydown', visible: memberIdChecked" />
+        <input type="text" name="memberUrl" placeholder="Enter Member URL" data-bind="value: memberUrl, valueUpdate: 'afterkeydown', visible: memberUrlChecked"
+            style="width: 450px;" />
+        <input type="text" style="visibility: hidden;" />
+    </div>
+    <br />
+    <h3>
+        Which profile do you want to return?
+    </h3>
+    <div class="radio-buttons" data-bind="foreach: profileVersions">
+        <label data-bind="css: { selected: value === $root.profileVersion() }">
+            <input type="radio" name="profileVersion" data-bind="value: value, checked: $root.profileVersion" />
+            <span data-bind="text: text"></span>
+        </label>
+    </div>
+    <br />
+    <h3>
+        Do you want to select any specific fields?</h3>
+    <div>
+        <span data-bind="text: fieldsSelectedCount"></span>&nbsp;<span>selected of </span>
+        <span data-bind="text: fields().length"></span>
+    </div>
+    <div class="radio-buttons" data-bind="foreach: fields">
+        <label data-bind="css: { selected: isChecked }">
+            <input type="checkbox" data-bind="value: value, checked: isChecked" />
+            <span data-bind="text: text"></span>
+        </label>
+    </div>
+    <br />
+    <h3>
+        To execute the above request, use this C#:
+    </h3>
+    <pre data-bind="text: cSharpCode"></pre>
+    <br />
+    <h3>
+        Which will call this URL on Linkedin's REST API:
+    </h3>
+    <div>
+        <textarea data-bind="value: restRequestUrl" style="width: 600px;" rows="2"></textarea>
+        <input type="button" value="Execute" data-bind="click: invoke" style="vertical-align: bottom;" />
+    </div>
+    <pre data-bind="text: restResource"></pre>
+</div>
+@section Scripts
+{
+
+    <script type="text/javascript" src="@Url.Content("~/Models/PeopleViewModel.js")"></script>
+
+    <script type="text/javascript">
+        ko.applyBindings(new PeopleViewModel());
+    </script>
+
+}

@@ -10,12 +10,13 @@ namespace LinkedN
     public class HttpCookieLinkedInTokenStorage : IStoreLinkedInTokens
     {
         private readonly HttpContextBase _httpContextBase;
+        public const string CookieNameConstant = "LinkedInRestV1OAuthToken";
 
         public HttpCookieLinkedInTokenStorage(HttpContextBase httpContextBase)
         {
             _httpContextBase = httpContextBase;
             CookieExpirationUtc = DateTime.UtcNow.AddDays(30);
-            CookieName = "LinkedInRestV1OAuthToken";
+            CookieName = CookieNameConstant;
             CookiePath = "/";
             SlidingExpiration = true;
         }

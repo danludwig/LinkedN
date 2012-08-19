@@ -69,7 +69,7 @@ namespace LinkedN
         public Person SendRequestFrom(string token)
         {
             if (string.IsNullOrWhiteSpace(token))
-                throw new ArgumentException("Cannot be null or whitespace.", "token");
+                throw new ArgumentException("An OAuth token is required to send this request.");
             var serviceDescription = ServiceDescriptionFactory.CreateUasDescription();
             var webConsumer = new WebConsumer(serviceDescription, _consumerTokenManager);
             var endpointUrl = BuildRequestUrl();

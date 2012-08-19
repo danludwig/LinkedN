@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{85F0F4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedN.CodeFacts", "LinkedN.CodeFacts\LinkedN.CodeFacts.csproj", "{03EC24E7-D4F4-41C4-9DE3-3AD89DE8658B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedN.MvcDemo", "LinkedN.MvcDemo\LinkedN.MvcDemo.csproj", "{B88062B2-6033-4F0B-96FF-B21E137971E2}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = LinkedN.vsmdi
@@ -37,6 +39,10 @@ Global
 		{03EC24E7-D4F4-41C4-9DE3-3AD89DE8658B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03EC24E7-D4F4-41C4-9DE3-3AD89DE8658B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03EC24E7-D4F4-41C4-9DE3-3AD89DE8658B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B88062B2-6033-4F0B-96FF-B21E137971E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B88062B2-6033-4F0B-96FF-B21E137971E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B88062B2-6033-4F0B-96FF-B21E137971E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B88062B2-6033-4F0B-96FF-B21E137971E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

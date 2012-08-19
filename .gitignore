@@ -49,7 +49,6 @@ Local.testsettings
 #Ignore Azure build csdef & Pubxml files
 ServiceDefinition.build.csdef
 *.azurePubxml
-UCosmic.Www.Mvc.Publish.xml
 
 #Ignore WebDeploy publish profile
 *.Publish.xml

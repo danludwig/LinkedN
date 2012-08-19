@@ -22,7 +22,7 @@ namespace LinkedN
             var definedTypes = GetType().Assembly.GetTypes();
             foreach (var definedType in definedTypes)
             {
-                if (!definedType.IsAssignableFrom(serviceType)) continue;
+                if (!serviceType.IsAssignableFrom(definedType)) continue;
 
                 //if (!definedType.ImplementedInterfaces.Contains(serviceType )) continue;
 
