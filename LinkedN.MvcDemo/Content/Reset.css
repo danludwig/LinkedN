@@ -88,3 +88,6 @@ pre {
     border-color: #93c3ee;
     color: #4d4e54;
 }
+.radio-buttons input {
+    cursor: pointer;
+}
